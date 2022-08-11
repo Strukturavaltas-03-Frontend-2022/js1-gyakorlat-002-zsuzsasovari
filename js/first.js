@@ -4,3 +4,9 @@
 - A függvény szorozza meg a tömbelemek értékét 1.27-tel, majd pedig 
 __térjen vissza__ az elemek egész számra kerekített összegével!
 */
+const brutto = (numericArray) => { 
+    let sumOfNumbers = numericArray
+        .map (item => item * 1.27)
+        .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+    return Math.round(sumOfNumbers);
+}
